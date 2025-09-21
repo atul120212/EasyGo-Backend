@@ -13,7 +13,7 @@ from serpapi import GoogleSearch
 import random
 import requests
 from datetime import datetime
-
+from mangum import Mangum
 # --- Environment Variable Setup ---
 load_dotenv()
 
@@ -373,4 +373,8 @@ async def get_hotels(query: str = Query(..., description="Hotel search query, e.
 
 @app.get("/")
 def read_root():
+
     return {"message": "Welcome to the TripsAI API. Visit /docs for documentation."}
+
+
+handler = Mangum(app)
