@@ -21,6 +21,7 @@ googleapis-common-protos==1.70.0
 grpcio==1.75.0
 grpcio-status==1.71.2
 h11==0.16.0
+mangum
 httpcore==1.0.9
 httplib2==0.31.0
 httptools==0.6.4
@@ -65,3 +66,4 @@ urllib3==2.5.0
 uvicorn==0.36.0
 watchfiles==1.1.0
 websockets==15.0.1
+
