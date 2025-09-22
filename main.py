@@ -373,4 +373,11 @@ async def get_hotels(query: str = Query(..., description="Hotel search query, e.
 
 @app.get("/")
 def read_root():
+
     return {"message": "Welcome to the TripsAI API. Visit /docs for documentation."}
+
+
+import uvicorn
+
+if __name__ == "__main__":
+  uvicorn.run("server.api:app", host="0.0.0.0", port=8000, reload=True)
